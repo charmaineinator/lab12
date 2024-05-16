@@ -34,6 +34,10 @@ class LCSMatrix:
     # Returns the set of distinct, longest common subsequences between the two
     # strings that were passed to the constructor.
     def get_longest_common_subsequences(self):
+        # Check if there is no common subsequence
+        if self.matrix_data[self.row_count][self.column_count] == 0:
+            return set()  # No common subsequences
+        
         result = set()
         self._find_lcs(self.row_count, self.column_count, "", result)
         return result

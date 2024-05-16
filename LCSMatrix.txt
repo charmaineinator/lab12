@@ -54,3 +54,4 @@ class LCSMatrix:
             else:
                 self._find_lcs(i, j - 1, current_str, result)
 
+
